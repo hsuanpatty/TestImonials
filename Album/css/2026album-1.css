@@ -1817,6 +1817,7 @@ input[type="checkbox"]:checked + span {
   color: #777c76;
   font-size: 16px;
   font-weight: 400;
+  text-align: justify;
   letter-spacing: .015em;
   line-height: 1.95;
   -webkit-box-orient: vertical;
