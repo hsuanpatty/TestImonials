@@ -623,7 +623,7 @@ a:hover {
     
 
     .VOLG-nav-tab .tab button::after {
-      top: 32px;
+      top: 31px;
       left: 55%;
       font-size: 17px;
     }
