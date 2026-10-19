@@ -458,7 +458,7 @@ a:hover {
   font: inherit;
 }
 
-@media (min-width: 371px) {
+@media (min-width: 376px) {
   .VOLG-tab a br{
     display: none;
   }
@@ -616,7 +616,7 @@ a:hover {
 
 @media (max-width: 375.98px) {
     .VOLG-nav-tab .container button a, .VOLG-nav-tab .tab button a {
-      font-size: 16px;
+      font-size: 16.5px;
       letter-spacing: 0.1rem;
       padding: 0 7px 0 14px;
     }
@@ -624,7 +624,7 @@ a:hover {
     .VOLG-nav-tab .tab button::after {
       top: 31px;
       left: 55%;
-      font-size: 17px;
+      font-size: 16px;
     }
 
     .VOLG-nav-tab .tab button {
