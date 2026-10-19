@@ -267,7 +267,7 @@ a:hover {
   .VOLG-nav-tab .container button a,
   .VOLG-nav-tab .tab button a {
     font-size: 16px;
-    padding: 0 6px 0 10px;
+    padding: 0 5px 0 10px;
     letter-spacing: 0;
   }
 
@@ -295,7 +295,7 @@ a:hover {
 
 @media (max-width: 767.98px) {
   .tab_inner .container {
-    padding: 20px 0 10px;
+    padding: 10px 0 ;
   }
 
   .volg-hr {
@@ -458,6 +458,12 @@ a:hover {
   font: inherit;
 }
 
+@media (min-width: 371px) {
+  .VOLG-tab a br{
+    display: none;
+  }
+}
+
 @media (min-width: 1400px) {
   .volg-owl-box .volg-owl {
     padding-bottom: 80px;
@@ -608,28 +614,92 @@ a:hover {
   }
 }
 
+@media (max-width: 370.98px) {
+    .VOLG-nav-tab .container button a, .VOLG-nav-tab .tab button a {
+        letter-spacing: 0.1rem;
+        padding: 0 7px 0 14px;
+    }
+
+    .VOLG-nav-tab .tab button::after {
+        top: 31px;
+        left: 55%;
+    }
+
+    .VOLG-nav-tab .tab button {
+      position: relative;
+      overflow: visible !important;
+    }
+
+    .VOLG-nav-tab .tab button::after {
+      position: absolute;
+      z-index: 10;
+    }
+
+    .VOLG-nav-tab .os-content {
+      overflow: visible !important;
+    }
+}
+
+
+/* =========================================================
+   旅人分享｜標題與搜尋區
+========================================================= */
+
 .blog-page-title {
   font-family: "Noto Sans TC", sans-serif;
   font-size: 2.2em;
   font-weight: 500;
   letter-spacing: 0.05rem;
   color: rgb(9, 2, 49);
-  line-height: normal;
+  line-height: 1.4;
+  margin-top: 0;
+  margin-bottom: 10px;
+  overflow-wrap: break-word;
 }
 
 .blog-top-bar {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 24px;
   width: 100%;
   margin-top: 0;
+  margin-bottom: 0;
   padding: 20px 30px 40px;
+  box-sizing: border-box;
 }
 
+/* 左側標題與副標 */
+.blog-title-group {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.blog-title-bottom {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.blog-title-bottom p {
+  margin: 0;
+  line-height: 1.8;
+  overflow-wrap: break-word;
+}
+
+/* 右側搜尋區 */
 .blog-search-area {
   display: flex;
   align-items: center;
+  justify-content: flex-end;
+  flex: 0 1 auto;
+  min-width: 0;
   gap: 20px;
+}
+
+.blog-search-area .tabbable {
+  min-width: 0;
 }
 
 .desktop_search {
@@ -637,14 +707,17 @@ a:hover {
   align-items: center;
   justify-content: flex-end;
   position: relative;
+  min-width: 0;
 }
 
 .desktop_search #Panel1 {
   display: flex;
   align-items: center;
   position: relative;
+  min-width: 0;
 }
 
+/* 搜尋按鈕 */
 .right .search .btn,
 .desktop_search .btn {
   width: 35px;
@@ -659,6 +732,7 @@ a:hover {
   z-index: 3;
 }
 
+/* 搜尋圖示 */
 .desktop_search span {
   position: absolute;
   right: 12px;
@@ -678,8 +752,10 @@ a:hover {
   color: #1e1e1e;
 }
 
+/* 關鍵字輸入框 */
 .desktop_search input:last-of-type {
   width: 220px;
+  max-width: 100%;
   height: 36px;
   border: 1px solid #373737;
   border-radius: 18px;
@@ -689,6 +765,7 @@ a:hover {
   margin: 0;
   box-shadow: none;
   font-size: 14px;
+  box-sizing: border-box;
 }
 
 #txtSearchKey::placeholder {
@@ -707,7 +784,10 @@ a:hover {
   box-shadow: none;
 }
 
-/* 導覽選單與下拉式選單 (Nav Pills & Dropdown) */
+/* =========================================================
+   導覽選單與下拉式選單
+========================================================= */
+
 .nav-pills > li > a {
   font-size: 18px;
   font-weight: 600;
@@ -729,35 +809,287 @@ a:hover {
 }
 
 .nav-pills.tab {
-  display: none !important;
+  display: none;
 }
 
+/* =========================================================
+   平板版：991px 以下
+========================================================= */
+/* =========================================================
+   平板：991.98px 以下
+========================================================= */
+
 @media (max-width: 991.98px) {
+
   .nav-pills.desktop {
-    display: none !important;
+    display: none;
   }
 
   .nav-pills.tab {
-    display: flex !important;
+    display: flex;
     width: 100%;
   }
 
   .blog-top-bar {
-    padding: 0 12px;
+    padding: 16px 20px 24px;
+    gap: 16px;
+    align-items: center;
   }
 
-  .desktop_search input:last-of-type {
-    width: 160px;
+  .blog-title-group {
+    flex: 1 1 45%;
+    min-width: 0;
   }
-}
 
-@media (max-width: 767.98px) {
   .blog-page-title {
     font-size: 1.8em;
   }
 
+  .blog-search-area {
+    display: flex;
+    flex: 1 1 50%;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 12px;
+    min-width: 0;
+  }
+
+  .blog-search-area .tabbable {
+    display: block;
+    flex: 0 0 auto;
+    width: auto;
+    min-width: 0;
+  }
+
+  .blog-search-area .desktop_search {
+    display: flex;
+    flex: 1 1 160px;
+    width: auto;
+    min-width: 0;
+  }
+
+  .blog-search-area .desktop_search #Panel1 {
+    display: flex;
+    position: relative;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .blog-search-area .desktop_search input:last-of-type {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+
+  .nav {
+    margin-bottom: 2px;
+  }
+}
+
+
+/* =========================================================
+   手機版：767.98px 以下
+   標題、副標在上，搜尋區在下方並維持同一列
+========================================================= */
+
+@media (max-width: 767.98px) {
+
   .blog-top-bar {
-    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 18px;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 20px 16px 24px;
+    box-sizing: border-box;
+  }
+
+  /* 標題區 */
+  .blog-title-group {
+    display: block;
+    width: 100%;
+    flex: none;
+    min-width: 0;
+  }
+
+  .blog-page-title {
+    font-size: 1.8em;
+    line-height: 1.45;
+    letter-spacing: 0.05rem;
+    margin: 0 0 8px;
+  }
+
+  /* 副標文字自然換行 */
+  .blog-title-bottom {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 8px;
+    width: 100%;
+  }
+
+  .blog-title-line {
+    flex: 0 0 24px;
+    margin-top: 12px;
+  }
+
+  .blog-title-bottom p {
+    flex: 1 1 180px;
+    min-width: 0;
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.8;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    word-break: normal;
+  }
+
+  /* 搜尋區：搜尋文章在左、關鍵字在右 */
+  .blog-top-bar .blog-search-area {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+    width: 100%;
+    flex: none;
+    min-width: 0;
+  }
+
+  /* 搜尋文章按鈕容器 */
+  .blog-top-bar .blog-search-area > .tabbable {
+    display: block;
+    flex: 0 0 auto;
+    width: auto;
+    min-width: 0;
+    max-width: none;
+    margin: 0;
+  }
+
+  /* 桌機版選單在手機隱藏，改用原本手機版分類選單 */
+  .blog-top-bar .nav-pills.desktop {
+    display: none;
+  }
+
+  /* 關鍵字搜尋框 */
+  .blog-top-bar .blog-search-area .desktop_search {
+    display: flex;
+    flex: 1 1 0;
+    width: auto;
+    min-width: 0;
+    max-width: none;
+    margin: 0;
+  }
+
+  .blog-top-bar .desktop_search #Panel1 {
+    display: flex;
+    position: relative;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .blog-top-bar .desktop_search input:last-of-type {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    height: 38px;
+    padding: 0 36px 0 10px;
+    margin: 0;
+    font-size: 13px;
+    box-sizing: border-box;
+  }
+
+  .blog-top-bar .desktop_search .btn {
+    flex-shrink: 0;
+  }
+
+  #txtSearchKey::placeholder {
+    font-size: 12px;
+    letter-spacing: 0;
+  }
+
+  /* 下拉選單避免超出手機螢幕 */
+  .blog-top-bar .dropdown-menu.list,
+  .well .dropdown-menu.list {
+    max-width: calc(100vw - 24px);
+    box-sizing: border-box;
+  }
+}
+
+
+/* =========================================================
+   小手機：420px 以下
+   搜尋文章與關鍵字搜尋仍維持同一列
+========================================================= */
+
+@media (max-width: 420px) {
+
+  .blog-top-bar {
+    padding: 16px 12px 22px;
+    gap: 14px;
+  }
+
+  .blog-page-title {
+    font-size: 1.65em;
+    margin-bottom: 6px;
+  }
+
+  .blog-title-bottom {
+    gap: 7px;
+  }
+
+  .blog-title-line {
+    flex-basis: 20px;
+    margin-top: 11px;
+  }
+
+  .blog-title-bottom p {
+    flex-basis: 160px;
+    font-size: 13px;
+    line-height: 1.8;
+  }
+
+  .blog-top-bar .blog-search-area {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 6px;
+    width: 100%;
+  }
+
+  .blog-top-bar .blog-search-area > .tabbable {
+    flex: 0 0 auto;
+    width: auto;
+    min-width: 0;
+  }
+
+  .blog-top-bar .blog-search-area .desktop_search {
+    flex: 1 1 0;
+    width: auto;
+    min-width: 0;
+  }
+
+  .blog-top-bar .desktop_search #Panel1 {
+    width: 100%;
+  }
+
+  .blog-top-bar .desktop_search input:last-of-type {
+    width: 100%;
+    min-width: 0;
+    height: 36px;
+    padding-left: 8px;
+    font-size: 12px;
+  }
+
+  #txtSearchKey::placeholder {
+    font-size: 11px;
+    letter-spacing: 0;
   }
 }
 
@@ -770,6 +1102,7 @@ a:hover {
   justify-content: space-between;
   gap: 5px;
   color: #525252;
+  text-wrap: nowrap;
 }
 
 .nav .dropdown-toggle .caret {
@@ -1064,7 +1397,7 @@ input[type="checkbox"]:checked + span {
   padding: 0;
   color: #293a32;
   font-family: "Noto Serif TC", "Songti TC", serif;
-  font-size: clamp(30px, 3.2vw, 42px);
+  font-size: 33px;
   font-weight: 500;
   letter-spacing: 5px;
   line-height: 1.35;
@@ -1109,8 +1442,7 @@ input[type="checkbox"]:checked + span {
     display: flex;
     flex-direction: row;
     align-items: center;
-    flex-wrap: nowrap;
-    gap: 28px;
+    flex-wrap: wrap;
   }
 
   #tab_b .blog-page-title {
@@ -1133,9 +1465,23 @@ input[type="checkbox"]:checked + span {
   }
 }
 
+
+@media (min-width: 999px) {
+  #tab_b .blog-title-group {
+    gap: 8px;
+  }
+}
+
+@media (min-width: 1200px) {
+  #tab_b .blog-title-group {
+    flex-wrap: nowrap;
+  }
+}
+
+
 @media (max-width: 991px) {
   #tab_b .blog-title-group {
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     padding-left: 18px;
   }
 
@@ -1148,16 +1494,20 @@ input[type="checkbox"]:checked + span {
     font-size: 13px;
     letter-spacing: 1px;
   }
+
+  #tab_b .blog-title-bottom {
+    margin-top: 5px;
+  }
 }
 
 @media (max-width: 576px) {
   #tab_b .blog-title-group {
-    margin-bottom: 24px;
+    margin-bottom: 10px;
     padding-left: 14px;
   }
 
   #tab_b .blog-title-group::before {
-    height: 70px;
+    height: 50px;
     width: 2px;
   }
 
@@ -1168,13 +1518,13 @@ input[type="checkbox"]:checked + span {
   }
 
   #tab_b .blog-page-title {
-    font-size: 29px;
+    font-size: 24px;
     letter-spacing: 3px;
   }
 
   #tab_b .blog-title-bottom {
     gap: 8px;
-    margin-top: 11px;
+    margin-top: 2px;
   }
 
   #tab_b .blog-title-line {
@@ -1186,19 +1536,30 @@ input[type="checkbox"]:checked + span {
     font-size: 12px;
     letter-spacing: 0.5px;
   }
+
+  .well {
+    padding: 0 0;
+  }
 }
 
+
+/* =====================================================
+   旅人分享 Travel Sharing
+   高級旅遊雜誌風格｜完整 CSS
+   ===================================================== */
+
 .travel-sharing-section {
-  --ts-ink: #29312c;
-  --ts-muted: #777d76;
-  --ts-green: #687d6b;
-  --ts-gold: #b59a68;
-  --ts-line: #e7e5de;
+  --ts-ink: #29251f;
+  --ts-text: #716b63;
+  --ts-muted: #948879;
+  --ts-line: #ded8cd;
+  --ts-gold: #b8a58d;
+
   width: 100%;
-  padding: clamp(20px, 7vw, 60px) 0 clamp(20px, 6vw, 60px);
-  background: radial-gradient(ellipse at 4% 0%, rgba(210,202,181,.18), transparent 34%), linear-gradient(180deg, #fbfaf7 0%, #f7f6f1 100%);
+  padding: 48px 0 60px;
   color: var(--ts-ink);
   overflow: hidden;
+  font-family: "Noto Sans TC", "Microsoft JhengHei", sans-serif;
 }
 
 .travel-sharing-section *,
@@ -1212,440 +1573,492 @@ input[type="checkbox"]:checked + span {
   margin: 0 auto;
 }
 
-.travel-sharing-heading {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: 28px;
-  margin: 0 0 34px;
-  padding: 0 0 25px;
-  border-bottom: 1px solid var(--ts-line);
-}
-
-.travel-sharing-heading-copy {
-  min-width: 0;
-}
-
-.travel-sharing-eyebrow {
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 12px;
-  color: var(--ts-green);
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: .24em;
-  line-height: 1.4;
-}
-
-.travel-sharing-eyebrow::before {
-  content: "";
-  display: inline-block;
-  width: 28px;
-  height: 1px;
-  background: var(--ts-gold);
-}
-
-.travel-sharing-heading h2 {
-  margin: 0 0 10px;
-  color: var(--ts-ink);
-  font-family: "Noto Serif TC", "Songti TC", serif;
-  font-size: clamp(30px, 3.5vw, 46px);
-  font-weight: 500;
-  letter-spacing: .08em;
-  line-height: 1.25;
-}
-
-.travel-sharing-heading-copy > p {
-  margin: 0;
-  color: #747973;
-  font-size: 14px;
-  letter-spacing: .04em;
-  line-height: 1.9;
-}
-
-.travel-sharing-heading-note {
-  flex: 0 0 auto;
-  padding: 0 0 3px 22px;
-  border-left: 1px solid #d8d4c9;
-  color: #96988e;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 10px;
-  letter-spacing: .18em;
-  line-height: 1.9;
-}
-
-.travel-sharing-box {
-  display: block;
-  width: 100%;
-  margin: 0;
-  overflow: visible;
-}
-
+.travel-sharing-box,
 .travel-sharing-box .tab-content,
 .travel-sharing-box .tab-pane {
+  display: block;
   width: 100%;
   min-width: 0;
   overflow: visible;
 }
 
+/* 三欄文章排列 */
 .travel-sharing-box .area_inner {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   align-items: stretch;
-  gap: 30px 26px;
+  gap: 34px;
   width: 100%;
   margin: 0;
   padding: 0;
 }
 
+/* 文章卡片 */
 .travel-sharing-box .sharing-card {
-  position: relative;
   display: flex;
   flex-direction: column;
   min-width: 0;
   min-height: 100%;
   margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background: #fff;
-  border: 1px solid rgba(49,59,52,.09);
-  border-radius: 3px;
+  padding: 20px;
+  border: 0;
+  border-radius: 0;
+  background: rgb(247, 244, 236);;
+  box-shadow: none;
   color: var(--ts-ink);
   text-decoration: none !important;
-  box-shadow: 0 7px 24px rgba(38,44,37,.035);
-  transition: transform .35s ease, box-shadow .35s ease, border-color .35s ease;
+  overflow: visible;
+  transition: none;
 }
 
 .travel-sharing-box .sharing-card:hover {
-  z-index: 2;
-  transform: translateY(-6px);
-  border-color: rgba(181,154,104,.55);
-  box-shadow: 0 18px 38px rgba(38,44,37,.10);
+  transform: none;
+  border: 0;
+  box-shadow: none;
   text-decoration: none !important;
 }
+
+/* =========================
+   1. 文章圖片
+   ========================= */
 
 .travel-sharing-box .sharing-card-image {
   position: relative;
   width: 100%;
-  aspect-ratio: 1.48 / 1;
+  aspect-ratio: 1.5 / 1;
+  margin: 0;
   overflow: hidden;
-  background: #e8e7df;
+  border-radius: 4px;
+  background: #e9e5dc;
 }
 
 .travel-sharing-box .sharing-card-image::after {
   content: "";
   position: absolute;
   inset: 45% 0 0;
+  z-index: 0;
   pointer-events: none;
-  background: linear-gradient(180deg, transparent 0%, rgba(17,24,20,.28) 100%);
-  opacity: .7;
-  transition: opacity .35s ease;
-}
-
-.travel-sharing-box .sharing-card:hover .sharing-card-image::after {
-  opacity: 1;
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(18, 20, 19, 0.34) 100%
+  );
+  opacity: 0.9;
 }
 
 .travel-sharing-box .sharing-card-image img {
   display: block;
   width: 100%;
   height: 100%;
+  margin: 0;
   object-fit: cover;
   object-position: center;
-  transition: transform .75s cubic-bezier(.2,.65,.3,1);
+  transition: transform 0.65s cubic-bezier(0.2, 0.65, 0.3, 1);
 }
 
 .travel-sharing-box .sharing-card:hover .sharing-card-image img {
-  transform: scale(1.045);
+  transform: scale(1.035);
 }
 
+/* 圖片右下角：分享人名稱 */
 .travel-sharing-box .sharing-image-index {
   position: absolute;
+  right: 10px;
+  bottom: 10px;
   z-index: 1;
-  right: 16px;
-  bottom: 14px;
-  display: inline-flex;
-  align-items: baseline;
-  gap: 7px;
+
+  display: inline-block;
+  max-width: calc(100% - 20px);
+  padding: 6px 10px;
+
+  overflow: hidden;
+  border-radius: 2px;
+  background: rgba(35, 34, 31, 0.84);
+
   color: #fff;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 23px;
+  font-family: "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+  font-size: 18px;
   font-weight: 400;
-  letter-spacing: .03em;
-  line-height: 1;
-  text-shadow: 0 1px 8px rgba(0,0,0,.15);
+  letter-spacing: 0.1rem;
+  line-height: 1.5;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-shadow: none;
 }
 
+/* 不再顯示 JOURNAL */
 .travel-sharing-box .sharing-image-index i {
-  font-family: Arial, sans-serif;
-  font-size: 8px;
-  font-style: normal;
-  letter-spacing: .16em;
+  display: none;
 }
+
+/* =========================
+   2. 文章內容
+   ========================= */
 
 .travel-sharing-box .sharing-card-content {
   display: flex;
   flex: 1 1 auto;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: stretch;
   min-width: 0;
-  padding: 22px 23px 23px;
-  background: #fff;
+  padding: 17px 0 0;
+  background: transparent;
 }
 
-.travel-sharing-box .sharing-category {
-  display: inline-flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 6px;
-  margin: 0 0 14px;
-  color: #69786a;
-  font-size: 16px;
-  font-weight: 700;
-  letter-spacing: .06em;
-  line-height: 1.7;
-}
-
-.travel-sharing-box .sharing-category span {
-  color: #c2ad83;
-  font-weight: 400;
-}
-
-.travel-sharing-box .sharing-meta {
+/* 分類與日期同一行 */
+.travel-sharing-box .sharing-category-row {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 10px;
+
   width: 100%;
-  margin: 0 0 14px;
-  padding: 0 0 12px;
-  border-bottom: 1px solid #eeede7;
-  color: #969991;
-  font-size: 10px;
-  line-height: 1.5;
-  letter-spacing: .04em;
+  min-width: 0;
+  margin: 0 0 17px;
 }
 
-.travel-sharing-box .sharing-author {
+/* 分類標籤容器 */
+.travel-sharing-box .sharing-category {
+  display: flex;
+  flex: 1 1 auto;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 5px;
+
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+
+  color: var(--ts-text);
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.6;
+}
+
+/* 單一分類標籤 */
+.travel-sharing-box .sharing-tag {
   display: inline-flex;
   align-items: center;
-  min-width: 0;
-  color: #777d75;
-  font-weight: 500;
-  font-size: 16px;
-  letter-spacing: 0.1rem;
-}
+  justify-content: center;
 
-.travel-sharing-box .sharing-author-mark {
-  display: inline-block;
-  flex: 0 0 5px;
-  width: 5px;
-  height: 5px;
-  margin-right: 7px;
-  border-radius: 50%;
-  background: var(--ts-gold);
-}
+  padding: 2px 7px;
+  border: 1px solid #cfc5b6;
 
-.travel-sharing-box .sharing-date {
-  flex: 0 0 auto;
-  color: #989990;
-  font-family: Georgia, "Times New Roman", serif;
+  border-radius: 2px;
+
+  color: #766d61;
+  background-color: #ffffff;
   font-size: 16px;
-  letter-spacing: .06em;
+  font-weight: 400;
+  line-height: 1.45;
   white-space: nowrap;
 }
+
+/* 日期固定在第一行右側 */
+.travel-sharing-box .sharing-date {
+  display: block;
+  flex: 0 0 auto;
+  margin-left: auto;
+
+  color: #988b7c;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 0.015em;
+  line-height: 1.5;
+  white-space: nowrap;
+}
+
+/* =========================
+   3. 文章標題
+   ========================= */
 
 .travel-sharing-box .sharing-title {
   display: -webkit-box;
   width: 100%;
-  margin: 0 0 12px;
+  min-width: 0;
+  margin: 0 0 11px;
+  padding: 0;
+
   overflow: hidden;
-  color: #28302c;
-  font-family: "Noto Serif TC", "Songti TC", serif;
-  font-size: clamp(17px, 1.45vw, 20px);
+  color: #29251f;
+
+  font-family: "Noto Serif TC", "Songti TC", "PMingLiU", serif;
+  font-size: 19px;
   font-weight: 600;
-  letter-spacing: .025em;
+  letter-spacing: 0.015em;
   line-height: 1.65;
+
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
-  transition: color .3s ease;
+  line-clamp: 2;
+
+  transition: color 0.25s ease;
 }
 
 .travel-sharing-box .sharing-card:hover .sharing-title {
-  color: #687d6b;
+  color: #88745c;
 }
+
+/* =========================
+   4. 文章簡介
+   ========================= */
 
 .travel-sharing-box .sharing-description {
   display: -webkit-box;
   width: 100%;
-  margin: 0 0 23px;
+  min-width: 0;
+  margin: 0 0 18px;
+  padding: 0;
+
   overflow: hidden;
-  color: #777c76;
-  font-size: 16px;
+  color: #777169;
+
+  font-size: 14px;
   font-weight: 400;
-  letter-spacing: .015em;
-  line-height: 1.95;
+  letter-spacing: 0.015em;
+  line-height: 1.9;
+
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
+  line-clamp: 3;
 }
+
+/* =========================
+   5. 繼續閱讀
+   不顯示作者或頭像
+   ========================= */
 
 .travel-sharing-box .sharing-more {
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 20px;
+  justify-content: flex-end;
+  gap: 2px;
+
   width: 100%;
   margin-top: auto;
-  padding-top: 14px;
-  border-top: 1px solid #eeede7;
-  color: #566b5b;
-  font-size: 16px;
-  font-weight: 700;
-  letter-spacing: .1em;
-  line-height: 1.5;
-  transition: color .3s ease;
+  padding: 12px 0 0;
+
+  border-top: 1px dashed var(--ts-line);
+
+  color: #89775f;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  line-height: 1.6;
+
+  transition: color 0.25s ease;
 }
 
-.travel-sharing-box .sharing-more i {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 27px;
-  height: 27px;
-  border: 1px solid #d9ded7;
-  border-radius: 50%;
-  color: #637967;
-  font-size: 15px;
+/* 保留 HTML 文字，不顯示舊的「看看完整故事」 */
+.travel-sharing-box .sharing-more > span {
+  font-size: 0;
+}
+
+/* 繼續閱讀文字 */
+.travel-sharing-box .sharing-more > span::after {
+  content: "繼續閱讀";
+  font-size: 16px;
+  letter-spacing: 0.1rem;
+}
+
+/* 箭頭外觀：簡約細線 */
+.travel-sharing-box .sharing-more > i {
+  position: relative;
+  display: inline-block;
+  width: 24px;
+  height: 1px;
+  margin: 0 0 0 8px;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: currentColor;
+  color: inherit;
+  font-size: 0;
   font-style: normal;
   font-weight: 400;
   line-height: 1;
-  transition: color .3s ease, background .3s ease, border-color .3s ease, transform .3s ease;
+  vertical-align: middle;
+  transition: width 0.3s ease, transform 0.3s ease;
 }
 
+/* 箭頭尖端 */
+.travel-sharing-box .sharing-more > i::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 1px;
+  width: 7px;
+  height: 7px;
+  border-top: 1px solid currentColor;
+  border-right: 1px solid currentColor;
+  background: transparent;
+  transform: translateY(-50%) rotate(45deg);
+  transition: right 0.3s ease;
+}
+
+/* 滑鼠移入：品牌色變化 */
 .travel-sharing-box .sharing-card:hover .sharing-more {
-  color: #9c8050;
+  color: #5f6f5e;
 }
 
-.travel-sharing-box .sharing-card:hover .sharing-more i {
-  transform: translate(2px,-2px);
-  border-color: #687d6b;
-  background: #687d6b;
-  color: #fff;
+/* 滑鼠移入：箭頭延伸 */
+.travel-sharing-box .sharing-card:hover .sharing-more > i {
+  width: 34px;
+  transform: translateX(2px);
 }
 
-.travel-sharing-footer {
-  display: flex;
-  align-items: center;
-  gap: 18px;
-  margin-top: 34px;
-  color: #999b91;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 9px;
-  letter-spacing: .2em;
-  line-height: 1.5;
+/* 確保不顯示舊的作者欄位 */
+.travel-sharing-box .sharing-meta,
+.travel-sharing-box .sharing-author,
+.travel-sharing-box .sharing-author-mark {
+  display: none;
 }
 
-.travel-sharing-footer-line {
-  display: block;
-  flex: 1 1 auto;
-  height: 1px;
-  background: #e4e1d8;
+
+
+@media (min-width: 1200px) { 
+  .travel-sharing-section { 
+    padding: 0 0 60px;
+  }
 }
+/* =========================
+   6. 平板版
+   ========================= */
 
 @media (max-width: 1024px) {
   .travel-sharing-inner {
-    width: min(calc(100% - 44px), 900px);
+    width: min(900px, calc(100% - 44px));
   }
 
   .travel-sharing-box .area_inner {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 22px;
-  }
-
-  .travel-sharing-box .sharing-card-content {
-    padding: 20px;
+    gap: 30px 22px;
   }
 
   .travel-sharing-box .sharing-title {
     font-size: 18px;
   }
+
+  .travel-sharing-box .sharing-category-row {
+    gap: 8px;
+  }
 }
+
+
+@media (max-width: 1200px) {
+  .travel-sharing-box .sharing-category-row {
+    flex-wrap: wrap;
+  }
+
+  .travel-sharing-section {
+    padding: 0 ;
+  }
+}
+
+/* =========================
+   7. 手機版
+   ========================= */
 
 @media (max-width: 640px) {
   .travel-sharing-section {
-    padding: 48px 0 52px;
+    padding: 10px 0 20px;
   }
 
   .travel-sharing-inner {
     width: calc(100% - 36px);
   }
 
-  .travel-sharing-heading {
-    align-items: flex-start;
-    margin-bottom: 24px;
-    padding-bottom: 20px;
-  }
-
-  .travel-sharing-heading h2 {
-    font-size: 32px;
-  }
-
-  .travel-sharing-heading-copy > p {
-    max-width: 290px;
-    font-size: 12px;
-  }
-
-  .travel-sharing-heading-note {
-    display: none;
-  }
-
   .travel-sharing-box .area_inner {
     grid-template-columns: minmax(0, 1fr);
-    gap: 20px;
+    gap: 30px;
   }
 
   .travel-sharing-box .sharing-card-image {
-    aspect-ratio: 1.55 / 1;
+    aspect-ratio: 1.5 / 1;
+    border-radius: 3px;
   }
 
   .travel-sharing-box .sharing-card-content {
-    padding: 20px 20px 21px;
+    padding-top: 14px;
+  }
+
+  .travel-sharing-box .sharing-category-row {
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 13px;
+    padding: 0 0 60px;
   }
 
   .travel-sharing-box .sharing-category {
-    margin-bottom: 12px;
+    gap: 4px;
+    font-size: 11px;
+  }
+
+  .travel-sharing-box .sharing-tag {
+    padding: 2px 6px;
+    font-size: 14px;
+  }
+
+  .travel-sharing-box .sharing-date {
+    font-size: 12px;
   }
 
   .travel-sharing-box .sharing-title {
-    font-size: 19px;
+    margin-bottom: 9px;
+    font-size: 18px;
     line-height: 1.65;
   }
 
   .travel-sharing-box .sharing-description {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     font-size: 13px;
+    line-height: 1.85;
     -webkit-line-clamp: 3;
+    line-clamp: 3;
   }
 
-  .travel-sharing-footer {
-    margin-top: 26px;
-    font-size: 8px;
-    letter-spacing: .13em;
+  .travel-sharing-box .sharing-image-index {
+    right: 8px;
+    bottom: 8px;
+    padding: 5px 8px;
+  }
+
+  .travel-sharing-box .sharing-more {
+    padding-top: 10px;
+    font-size: 12px;
+  }
+
+  .travel-sharing-box .sharing-more > span::after {
+    font-size: 16px;
+  }
+
+  .share {
+    margin-bottom: 0;
   }
 }
 
+/* 小尺寸手機 */
 @media (max-width: 380px) {
   .travel-sharing-inner {
     width: calc(100% - 28px);
   }
 
-  .travel-sharing-box .sharing-card-content {
-    padding: 17px;
+  .travel-sharing-box .sharing-category-row {
+    gap: 5px;
   }
 
-  .travel-sharing-box .sharing-meta {
-    font-size: 9px;
+  .travel-sharing-box .sharing-category {
+    gap: 3px;
+  }
+
+  .travel-sharing-box .sharing-tag {
+    padding: 2px 4px;
+  }
+
+  .travel-sharing-box .sharing-date {
+    font-size: 17px;
   }
 
   .travel-sharing-box .sharing-title {
@@ -1653,17 +2066,16 @@ input[type="checkbox"]:checked + span {
   }
 }
 
+/* 減少動態效果設定 */
 @media (prefers-reduced-motion: reduce) {
-  .travel-sharing-box .sharing-card,
-  .travel-sharing-box .sharing-card img,
+  .travel-sharing-box .sharing-card-image img,
   .travel-sharing-box .sharing-title,
   .travel-sharing-box .sharing-more,
-  .travel-sharing-box .sharing-more i {
+  .travel-sharing-box .sharing-more > i {
     transition: none;
   }
 
-  .travel-sharing-box .sharing-card:hover,
-  .travel-sharing-box .sharing-card:hover img {
+  .travel-sharing-box .sharing-card:hover .sharing-card-image img {
     transform: none;
   }
 }
