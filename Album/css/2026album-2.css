@@ -90,10 +90,7 @@ a:hover {
   }
 }
 
-/* ==========================
-   導覽列與選單
-========================== */
-
+/* 導覽列與選單 */
 .VOLG {
   padding: 0;
 }
@@ -122,9 +119,7 @@ a:hover {
   text-decoration: none;
 }
 
-/* ==========================
-   上方導覽分隔線
-========================== */
+/* 上方導覽分隔線 */
 
 .VOLG-nav-tab .container button:nth-child(2) a,
 .VOLG-nav-tab .container button:nth-child(3) a,
@@ -132,9 +127,7 @@ a:hover {
   border-left: 2px solid #D9D9D9;
 }
 
-/* ==========================
-   Tab
-========================== */
+/* Tab */
 
 .VOLG-nav-tab .tab {
   width: 100%;
@@ -150,9 +143,7 @@ a:hover {
   line-height: 4rem;
 }
 
-/* ==========================
-   Tab 按鈕
-========================== */
+/* Tab 按鈕 */
 
 .VOLG-nav-tab .tab button {
   font-family: 'Noto Sans TC', sans-serif;
@@ -164,10 +155,7 @@ a:hover {
   position: relative;
 }
 
-/* ==========================
-   Tab 文字
-   左右 Padding 保持一致
-========================== */
+/* Tab 文字 */
 
 .VOLG-nav-tab .container button a,
 .VOLG-nav-tab .tab button a {
@@ -181,9 +169,7 @@ a:hover {
   box-sizing: border-box;
 }
 
-/* ==========================
-   Hover / Active
-========================== */
+/* Hover / Active */
 
 .VOLG-nav-tab .container button a:hover,
 .VOLG-nav-tab .tab button a:hover,
@@ -202,10 +188,7 @@ a:hover {
   outline: 0;
 }
 
-/* ==========================
-   Arrow Hover
-========================== */
-
+/* Arrow Hover */
 .VOLG-nav-tab .tab button::before {
   content: '';
   width: 101%;
@@ -238,9 +221,7 @@ a:hover {
   display: block;
 }
 
-/* ==========================
-   平板
-========================== */
+/* 平板 */
 
 @media (max-width: 767.98px) {
   .VOLG-nav-tab .container button a,
@@ -255,9 +236,7 @@ a:hover {
   }
 }
 
-/* ==========================
-   手機 575 以下
-========================== */
+/* 手機 575 以下 */
 
 @media (max-width: 575.98px) {
   .VOLG-nav-tab {
@@ -651,10 +630,7 @@ a:hover {
 
 
 
-/* =========================================================
-   旅人分享｜標題與搜尋區
-========================================================= */
-
+/* 旅人分享｜標題與搜尋區 */
 .blog-page-title {
   font-family: "Noto Sans TC", sans-serif;
   font-size: 2.2em;
@@ -675,7 +651,7 @@ a:hover {
   width: 100%;
   margin-top: 0;
   margin-bottom: 0;
-  padding: 20px 30px 40px;
+  padding: 20px 50px 40px;
   box-sizing: border-box;
 }
 
@@ -794,10 +770,7 @@ a:hover {
   box-shadow: none;
 }
 
-/* =========================================================
-   導覽選單與下拉式選單
-========================================================= */
-
+/* 導覽選單與下拉式選單 */
 .nav-pills > li > a {
   font-size: 18px;
   font-weight: 600;
@@ -822,13 +795,8 @@ a:hover {
   display: none;
 }
 
-/* =========================================================
-   平板版：991px 以下
-========================================================= */
-/* =========================================================
-   平板：991.98px 以下
-========================================================= */
 
+/* 平板版：991px 以下 */
 @media (max-width: 991.98px) {
 
   .nav-pills.desktop {
@@ -898,10 +866,7 @@ a:hover {
 }
 
 
-/* =========================================================
-   手機版：767.98px 以下
-   標題、副標在上，搜尋區在下方並維持同一列
-========================================================= */
+/* 手機版：767.98px 以下 */
 
 @media (max-width: 767.98px) {
 
@@ -1033,10 +998,7 @@ a:hover {
 }
 
 
-/* =========================================================
-   小手機：420px 以下
-   搜尋文章與關鍵字搜尋仍維持同一列
-========================================================= */
+/* 小手機：420px 以下 */
 
 @media (max-width: 420px) {
 
@@ -1362,10 +1324,7 @@ input[type="checkbox"]:checked + span {
   }
 }
 
-/* =========================================================
-   旅人分享｜雜誌風格標題設計
-========================================================= */
-
+/* 旅人分享｜標題設計 */
 #tab_b .blog-title-group {
   position: relative;
   display: flex;
@@ -1482,6 +1441,7 @@ input[type="checkbox"]:checked + span {
   }
 }
 
+
 @media (min-width: 1200px) {
   #tab_b .blog-title-group {
     flex-wrap: nowrap;
@@ -1509,6 +1469,7 @@ input[type="checkbox"]:checked + span {
     margin-top: 5px;
   }
 }
+
 
 @media (max-width: 576px) {
   #tab_b .blog-title-group {
@@ -1553,10 +1514,7 @@ input[type="checkbox"]:checked + span {
 }
 
 
-/* =====================================================
-   旅人分享 Travel Sharing
-   高級旅遊雜誌風格｜完整 CSS
-   ===================================================== */
+/* 旅人分享 */
 
 .travel-sharing-section {
   --ts-ink: #29251f;
@@ -1628,9 +1586,7 @@ input[type="checkbox"]:checked + span {
   text-decoration: none !important;
 }
 
-/* =========================
-   1. 文章圖片
-   ========================= */
+/* 1. 文章圖片 */
 
 .travel-sharing-box .sharing-card-image {
   position: relative;
@@ -1670,7 +1626,7 @@ input[type="checkbox"]:checked + span {
   transform: scale(1.035);
 }
 
-/* 圖片右下角：分享人名稱 */
+/* 分享人名稱 */
 .travel-sharing-box .sharing-image-index {
   position: absolute;
   right: 10px;
@@ -1696,15 +1652,12 @@ input[type="checkbox"]:checked + span {
   text-shadow: none;
 }
 
-/* 不再顯示 JOURNAL */
+/* 不再顯示 */
 .travel-sharing-box .sharing-image-index i {
   display: none;
 }
 
-/* =========================
-   2. 文章內容
-   ========================= */
-
+/* 2. 文章內容 */
 .travel-sharing-box .sharing-card-content {
   display: flex;
   flex: 1 1 auto;
@@ -1780,10 +1733,7 @@ input[type="checkbox"]:checked + span {
   white-space: nowrap;
 }
 
-/* =========================
-   3. 文章標題
-   ========================= */
-
+/* 3. 文章標題 */
 .travel-sharing-box .sharing-title {
   display: -webkit-box;
   width: 100%;
@@ -1811,10 +1761,7 @@ input[type="checkbox"]:checked + span {
   color: #88745c;
 }
 
-/* =========================
-   4. 文章簡介
-   ========================= */
-
+/* 4. 文章簡介 */
 .travel-sharing-box .sharing-description {
   display: -webkit-box;
   width: 100%;
@@ -1835,11 +1782,7 @@ input[type="checkbox"]:checked + span {
   line-clamp: 3;
 }
 
-/* =========================
-   5. 繼續閱讀
-   不顯示作者或頭像
-   ========================= */
-
+/* 5. 繼續閱讀 */
 .travel-sharing-box .sharing-more {
   display: flex;
   align-items: center;
@@ -1861,7 +1804,6 @@ input[type="checkbox"]:checked + span {
   transition: color 0.25s ease;
 }
 
-/* 保留 HTML 文字，不顯示舊的「看看完整故事」 */
 .travel-sharing-box .sharing-more > span {
   font-size: 0;
 }
@@ -1873,7 +1815,7 @@ input[type="checkbox"]:checked + span {
   letter-spacing: 0.1rem;
 }
 
-/* 箭頭外觀：簡約細線 */
+/* 箭頭 */
 .travel-sharing-box .sharing-more > i {
   position: relative;
   display: inline-block;
@@ -1908,18 +1850,18 @@ input[type="checkbox"]:checked + span {
   transition: right 0.3s ease;
 }
 
-/* 滑鼠移入：品牌色變化 */
+/* 滑鼠移入 */
 .travel-sharing-box .sharing-card:hover .sharing-more {
   color: #5f6f5e;
 }
 
-/* 滑鼠移入：箭頭延伸 */
+/* 滑鼠移入 箭頭延伸 */
 .travel-sharing-box .sharing-card:hover .sharing-more > i {
   width: 34px;
   transform: translateX(2px);
 }
 
-/* 確保不顯示舊的作者欄位 */
+
 .travel-sharing-box .sharing-meta,
 .travel-sharing-box .sharing-author,
 .travel-sharing-box .sharing-author-mark {
@@ -1933,10 +1875,9 @@ input[type="checkbox"]:checked + span {
     padding: 0 0 60px;
   }
 }
-/* =========================
-   6. 平板版
-   ========================= */
 
+
+/* 平板版 */
 @media (max-width: 1024px) {
   .travel-sharing-inner {
     width: min(900px, calc(100% - 44px));
@@ -1967,10 +1908,7 @@ input[type="checkbox"]:checked + span {
   }
 }
 
-/* =========================
-   7. 手機版
-   ========================= */
-
+/* 手機版 */
 @media (max-width: 640px) {
   .travel-sharing-section {
     padding: 10px 0 20px;
@@ -2075,7 +2013,7 @@ input[type="checkbox"]:checked + span {
   }
 }
 
-/* 減少動態效果設定 */
+/* 減少動態效果 */
 @media (prefers-reduced-motion: reduce) {
   .travel-sharing-box .sharing-card-image img,
   .travel-sharing-box .sharing-title,
