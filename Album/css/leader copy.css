@@ -1,0 +1,563 @@
+form {
+    margin: 0;
+}
+
+.search {
+    width: 100%;
+    margin: 0 1.25% 20px;
+}
+
+
+/* -------------- VOLG -------------- */
+
+.os-scrollbar-vertical {
+    display: none;
+}
+
+.main-banner #h1 {
+    font-family: 'Noto Sans TC', sans-serif;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 2.3rem;
+    letter-spacing: 5px;
+    text-shadow: 1px 2px 5px rgb(0 0 0 / 50%);
+    margin: 5px 0;
+}
+
+.VOLG {
+    padding: 30px 0 0 0;
+}
+
+.VOLG-nav-tab {
+    height: 4rem;
+}
+
+.VOLG-nav-tab .container {
+    /* width: 60%; */
+    text-align: center;
+    height: 100%;
+}
+
+
+/* .VOLG-nav-tab .container>button a {
+       margin-bottom: .6rem;
+   } */
+
+.VOLG-nav-tab .container button {
+    border: none;
+    background: none;
+    white-space: nowrap;
+}
+
+.VOLG-nav-tab .container button a {
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 1.1rem;
+    border-left: 1px solid #959595;
+    text-decoration: none;
+}
+
+.VOLG-nav-tab .tab {
+    width: 100%;
+    height: 68px;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    line-height: 4rem;
+}
+
+.VOLG-nav-tab .tab button {
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 1.4rem;
+    cursor: pointer;
+    display: inline-block;
+    background: white;
+    border: none;
+    position: relative;
+}
+
+.VOLG-nav-tab .tab button:last-of-type {
+    border-right: 1px solid #959595;
+}
+
+.VOLG-nav-tab .container button a,
+.VOLG-nav-tab .tab button a {
+    display: block;
+    /* line-height: 50px; */
+    padding: 0 3.6rem;
+}
+
+.VOLG-nav-tab .container button a:hover,
+.VOLG-nav-tab .tab button a:hover,
+.VOLG-nav-tab .tab button.active a {
+    color: #8c001a;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+.VOLG-nav-tab .tab button:focus {
+    outline: 0;
+}
+
+
+/* .VOLG-nav-tab .container button::before, */
+
+.VOLG-nav-tab .tab button::before {
+    content: '';
+    width: 101%;
+    height: 15px;
+    position: absolute;
+    top: 16px;
+    left: 1.9px;
+    pointer-events: none;
+}
+
+
+/* .VOLG-nav-tab .container button:hover:before, */
+
+.VOLG-nav-tab .tab button:hover::before,
+.VOLG-nav-tab .tab button.active::before {
+    border-bottom: 5px solid #8c001a;
+}
+
+.VOLG-nav-tab .tab button:hover {
+    color: #8c001a;
+}
+
+.VOLG-nav-tab .tab button::after {
+    content: url(../images/20_triangle.png);
+    position: absolute;
+    top: 23px;
+    left: 47%;
+    display: none;
+    letter-spacing: 0;
+    text-indent: 0;
+}
+
+.VOLG-nav-tab .tab button:hover::after,
+.VOLG-nav-tab .tab button.active::after {
+    display: block;
+}
+
+@media (max-width:768px) {
+    .main-banner img {
+        height: 200px;
+    }
+    .main-banner #h1 {
+        min-width: 40%;
+        text-align: center;
+    }
+}
+
+
+/* 領隊 */
+
+.tab_inner .container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.fancybox {
+    width: 22.5%;
+    margin: 0 1.25% 2rem;
+    position: relative;
+}
+
+.tab_inner figure img {
+    width: 100%;
+    height: 354px;
+    object-fit: cover;
+    display: block;
+    border-radius: 10px;
+}
+
+figcaption {
+    width: 100%;
+    background: transparent;
+    color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .7rem 1rem;
+    position: absolute;
+    bottom: 0;
+    border-radius: 0 0 10px 10px;
+    transition: .5s;
+}
+
+figcaption p {
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 19px;
+}
+
+figcaption p span {
+    font-size: 15px;
+    margin-left: .3rem;
+}
+
+.tab_inner a:hover figcaption {
+    background: rgba(140, 0, 26, 0.6);
+    color: #fff;
+}
+
+.modal {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 20000;
+    display: none;
+    transition: 1s;
+}
+
+.modal.show {
+    display: block;
+    transition: 1s;
+}
+
+.modal_box {
+    width: 60%;
+    height: 80vh;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    /* background: rgba(225, 225, 225, 0.88); */
+    background-image: linear-gradient(130deg, #fff 37%, rgba(255, 255, 255, 0.88) 36%);
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5rem;
+}
+
+.desktop_close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+}
+
+.desktop_close:hover {
+    content: url(../images/close-1.png);
+}
+
+.tab_close {
+    display: none;
+}
+
+.modal_box .img {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-right: .8rem;
+    position: relative;
+}
+
+.modal_box .img::before {
+    background: url(../images/frame.png) no-repeat center;
+    content: '';
+    width: 380px;
+    height: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.modal_box .img img {
+    width: 360px;
+    height: 360px;
+    margin: 0 auto;
+    object-fit: cover;
+    display: block;
+    /* padding: 4rem; */
+}
+
+.modal_box .introduce {
+    width: 45%;
+    height: auto;
+    max-height: 100%;
+    padding: 1rem 1rem 1rem 0;
+    z-index: 1;
+    overflow-y: auto;
+}
+
+.introduce .title {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #d3939d;
+    margin-bottom: 1.1rem;
+}
+
+.name h1 {
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 26px;
+    font-weight: bolder;
+    margin-bottom: .3rem;
+}
+
+.name h2 {
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+}
+
+.icon a {
+    width: 33px;
+    height: 33px;
+    margin-right: .5rem;
+}
+
+.icon a img {
+    display: block;
+}
+
+.icon a:last-of-type {
+    margin-right: 0;
+}
+
+.icon a.line:hover img {
+    content: url(../images/line-1.svg);
+}
+
+.icon a.fb:hover img {
+    content: url(../images/fb-1.svg);
+}
+
+.icon a.blog:hover img {
+    content: url(../images/blog-1.svg);
+    display: block;
+}
+
+.introduce h3 i {
+    font-size: 12px;
+    margin-right: .2rem;
+}
+
+.introduce h3 {
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 17px;
+    font-weight: bolder;
+    color: #8c001a;
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: .8rem;
+}
+
+.txt_a,
+.txt_b {
+    font-size: 15px;
+    text-align: justify;
+    line-height: 1.5rem;
+}
+
+.txt_a {
+    margin-bottom: 2rem;
+}
+
+.page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 0 3rem;
+}
+
+.page span {
+    width: 40px;
+    height: 40px;
+    margin-right: 1rem;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.page span a {
+    color: #656565;
+}
+
+.page span:last-of-type {
+    margin-right: 0;
+}
+
+.page span.active {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    background: #959595;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.page span.active a {
+    color: #fff;
+}
+
+@media (max-width:1640px) {
+    .modal_box {
+        width: 70%;
+    }
+}
+
+@media (max-width:1330px) {
+    .modal_box .img img {
+        width: 93%;
+    }
+    .modal_box .img::before {
+        width: 100%;
+    }
+}
+
+@media (max-width:1150px) {
+    .modal_box {
+        background-image: linear-gradient(156deg, #fff 56%, rgba(255, 255, 255, 0.88) 36%);
+        flex-wrap: wrap;
+        overflow-y: auto;
+    }
+    .modal_box .img,
+    .modal_box .introduce {
+        width: 100%;
+    }
+    .modal_box .img {
+        height: 430px;
+        margin-right: 0;
+    }
+    .modal_box .img img {
+        width: 360px;
+    }
+    .modal_box .introduce {
+        padding: 0;
+        overflow-y: initial;
+    }
+}
+
+@media (max-width:768px) {
+    .fancybox {
+        width: 31%;
+        margin: 0 1.1666% 1.5rem;
+    }
+    .modal_box {
+        background-image: linear-gradient(155deg, #fff 40%, rgba(225, 225, 225, 0.88) 36%);
+        padding: 3rem;
+    }
+    .tab_close {
+        display: block;
+        width: 8%;
+        position: absolute;
+        top: 3%;
+        right: 15%;
+    }
+    .desktop_close {
+        display: none;
+    }
+    figcaption {
+        background: rgba(140, 0, 26, 0.6);
+        color: #fff;
+        padding: 0.6rem;
+    }
+    figcaption p {
+        font-size: 16px;
+    }
+    figcaption p span {
+        font-size: 14px;
+    }
+}
+
+@media (max-width:710px) {
+    .modal_box .img img {
+        width: 92%;
+    }
+}
+
+@media (max-width:700px) {
+    .modal_box .img::before {
+        display: none;
+    }
+}
+
+@media (max-width:600px) {
+    .modal_box {
+        width: 90%;
+    }
+    .tab_close {
+        right: 5%;
+    }
+}
+
+@media (max-width:500px) {
+    .fancybox {
+        width: 48%;
+        margin: 0 1% 1rem;
+    }
+    .tab_close {
+        width: 10%;
+        /* top: 35px; */
+    }
+    .modal_box {
+        padding: 1.5rem;
+    }
+}
+
+@media(max-width:450px) {
+    /* .modal_box .img img {
+        padding: 1rem;
+    } */
+    .modal_box .img img {
+        width: 100%;
+        height: 350px;
+    }
+}
+
+@media (max-width:414px) {
+    .name {
+        display: flex;
+        align-items: flex-end;
+        margin-top: .8rem;
+    }
+    .name h1 {
+        margin: 0;
+        margin-right: .5rem;
+    }
+}
+
+@media (max-width:400px) {
+    .name {
+        margin-bottom: .8rem;
+    }
+    .introduce .title {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width:390px) {
+    .modal_box {
+        background-image: linear-gradient(159deg, #fff 36%, rgba(225, 225, 225, 0.88) 36%);
+    }
+    .tab_close {
+        width: 12%;
+    }
+    .page span {
+        margin-right: .1rem;
+    }
+}
